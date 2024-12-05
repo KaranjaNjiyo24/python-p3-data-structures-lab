@@ -26,11 +26,14 @@ def print_spicy_foods(spicy_foods):
     for food in spicy_foods:
         heat_level_emojis = "🌶" * food['heat_level']
         print(f"{food['name']} ({food['cuisine']}) | Heat Level: {heat_level_emojis}")
-print(print_spicy_foods(spicy_foods))
+# print(print_spicy_foods(spicy_foods))
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
-    pass
-
+    for food in spicy_foods:
+        if food['cuisine'].lower() == cuisine.lower():
+            return food
+    return None
+# print(get_spicy_food_by_cuisine(spicy_foods, "Sichuan"))
 def print_spiciest_foods(spicy_foods):
     pass
 
